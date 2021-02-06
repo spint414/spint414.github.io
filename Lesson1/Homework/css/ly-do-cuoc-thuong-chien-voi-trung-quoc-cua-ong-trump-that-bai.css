@@ -1,10 +1,8 @@
-
-body {
-    line-height: 20px;
-    background-color: #fff;
-    font: 400 14px NotoSans, sans-serif;
-    color: #5d5d5d;
-}
+.container {
+    margin:0 auto; 
+    width:660px;
+    vertical-align: baseline 
+ }
 
 .topnav {
     margin:0 auto; 
@@ -12,21 +10,14 @@ body {
     position: relative; 
 }
 
-.container {
-    margin:0 auto; 
-    width:660px;
-    vertical-align: baseline 
- }
-
- .logo {
+.logo {
     display: inline-block;
     vertical-align: top;
     width: 150px;
 }
 
-
-a {
-    text-decoration: none;
+h1 {
+    font-size: 22px;
 }
 
 body {
@@ -34,6 +25,9 @@ body {
     background-color: #fff;
     font: 400 14px NotoSans, sans-serif;
     color: #5d5d5d;
+}
+a {
+    text-decoration: none;
 }
 
 .trend {
@@ -105,18 +99,79 @@ body {
     background-color: #971927;
 }
 
-.tag {
- color:#971927;
+.ArticleContent {
+    line-height: 24px;
+    padding: 5px 0px;
+    color: #333;
 }
 
-.article-link {
-    color: #5d5d5d;
+.ArticleDate {
+    line-height: 20px;
+    font-size: 10px;
+    color: #565656;
 }
 
-.article-link:hover {
-    color: #971927;
+.trump {
+    color:  #971928;
 }
 
-.article-image {
-    vertical-align: text-top;
+.trump:hover {
+    text-decoration: underline;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.RelatedNewsCaption {
+    text-transform: uppercase;
+    color: #971928;
+    float: left;
+    background: #fff;
+    padding-right: 7px;
+    font-family: "Roboto-Bold";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.greyline {
+    display: block;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.RelatedNewsContent {
+        padding: 0px 10px 0px 0px;
+        background-color: #ebeff7;
+        clear: both;
+        min-height: 101px;
+        margin: 10px auto;
+}
+.RelatedNewsTitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    padding-top: 5px;
+}
+
+.RelatedNewsTitle {
+    text-emphasis: underline;
+    color:  #971928;
+}
+
+.summary {
+    margin: 0px;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0px;
+}
+
+.RelatedNewsImage {
+    float: left;
+    padding-right: 20px;
+}
+
+h4 {
+    display: block;
+    padding-top: 20px;
 }
