@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+p, h2, h5 {
+    word-spacing: normal;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background-color: black;
+}
+
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .container{
+    padding: 30px;
+    background: url('file:///C:/Users/An Ordinary Person/Desktop/Foundation/Lesson5/Homework/image/80585.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 200px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    word-spacing: -1ch;
+}
+
+.banner {
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 600px;
+}
+
+.nav .menu{
+    margin-left: auto;
+    margin-right: auto;
+    background-color:teal;
+    width: 1000px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+.menu-link {
+    display:inline-block;
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/*content */
+.content {
+    margin-top: 10px;
+}
+
+.left .right {
+    display: inline-block;
+    word-spacing: normal;
+    vertical-align: top;
+}
+
+.left {
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc(65% - 10px);
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.right {
+    display: inline-block;
+    width: 35%;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.between {
+    background-image: url('file:///C:/Users/An Ordinary Person/Desktop/Foundation/Lesson5/Homework/image/hal-9000.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 160x;
+    border: 0;
+    height: 30px;
+}
+
+/* For main content */
+.main-post {
+    padding-bottom: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.post-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog-header, .detail {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.blog-header {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.time {
+    margin-top: 0px;
+    color: #666;
+}
+
+.detail {
+    margin-bottom: 0px
+}
+
+/* For author */
+.author {
+    padding: 20px 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.author-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.author-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.author-detail {
+    padding-top: 10px;
+}
+
+/* For footer */
+.footer {
+    background-color: teal;
+    padding: 20px;
+}
+
+.copy-right {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
