@@ -1,0 +1,42 @@
+body {
+    padding: 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+table.a {
+    table-layout: fixed;
+    width: 60%;
+  }
+
+table, th, td {
+    border: 1px solid #858585;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-title {
+    background-color: #14b5eb;
+    color: white;
+}
+
+.table-header{
+    background-color: #666666;
+    color: white;
+    text-transform: uppercase;
+}
+
+td, th {
+    padding: 10px;
+}
+
+.data:nth-child(even) {
+    background-color: #f7f6f4;
+}
+
+#category {
+    background-color: #e9e8e6;
+}
+
+tfoot {
+    background-color: #e9e8e6;
+}
