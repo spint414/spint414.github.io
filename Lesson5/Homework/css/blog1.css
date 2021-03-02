@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial;
+    background-color: black;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    word-spacing: -1ch;
+}
+
+.main .container {
+    background-color: white;
+    padding: 50px 300px 60px 50px;
+}
+
+.nav .menu{
+    margin-left: auto;
+    margin-right: auto;
+    background-color:teal;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+.menu-link {
+    display:inline-block;
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.left, .right {
+    display: inline-block;
+    vertical-align: top;
+    word-spacing: normal;
+}
+
+.left {
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc(35% - 200px);
+    margin-right: 200px;
+    vertical-align: top;
+}
+
+.right {
+    display: inline-block;
+    width: 65%;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.between {
+    background-image: url('file:///C:/Users/An Ordinary Person/Desktop/Foundation/Lesson5/Homework/image/hal-9000.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    border: 0;
+    height: 30px;
+}
+
+.left {
+    text-align: center;
+    border-bottom: 5px dotted teal;
+}
+
+.author-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.author-detail {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.blog-category, .blog-author, .blog-time {
+    color: grey;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    color: teal;
+}
