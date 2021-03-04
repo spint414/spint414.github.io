@@ -70,7 +70,7 @@ body {
     margin-top: 10px;
 }
 
-.left .right {
+.left, .right {
     display: inline-block;
     word-spacing: normal;
     vertical-align: top;
