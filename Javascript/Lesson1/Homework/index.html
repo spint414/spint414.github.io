@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Công thức tính hình tròn (hai cách)
+        function circumference1(d) { 
+            let text = `nếu đường kính là ${d} thì chu vi sẽ là`
+            return text + " " + d * Math.PI + " (cùng đơn vị)"
+        }
+        console.log(circumference1(4))
+
+        function circumference2(r) {
+            let text = `nếu bán kính là ${r} thì chu vi sẽ là`
+            return text + " " + r * 2 * Math.PI + " (cùng đơn vị)"
+        }
+        console.log(circumference2(3))
+
+        // Công thức tính diện tích hình tròn
+        function AreaCircle(r) {
+            let text = `nếu bán kính là ${r} thì diện tích sẽ là`
+            return text + " " + Math.pow(r, 2) * Math.PI + " (cùng đơn vị^2)"
+        }
+        console.log(AreaCircle(5))
+
+        // Quy đổi từ cm -> m
+        function cm_to_m(cm) {
+            let text = `${cm}cm là`
+            return text + " " + cm / 100 + "m"
+        }
+        console.log(cm_to_m(34))
+        
+        // Quy đổi từ phút sang giờ
+        function min_to_hr(min) {
+            let text = `${min} phút là`
+            return text + " " + min / 60 + " giờ"
+        }
+        console.log(min_to_hr(120))
+
+        // Giải phuong bậc nhất
+        function linearEquation(a, b, c) {
+            let x = (c-b) / a
+            let text = `Với phương trình ${a}x + ${b} = ${c} thì x = ${x}`
+            return text 
+        }
+        console.log(linearEquation(2, 4, 6))
+
+        // Độ C => độ F
+        function C_to_F(C) {
+            let F = (C * 1.8) + 32
+            let text = `${C}C là ${F}F`
+            return text 
+        }
+        console.log(C_to_F(30))
+
+        // Tính chỉ số BMI của người
+        function BMI_calc(height, weight) {
+            let bmi = (weight) / (height * height)
+            return "Chỉ số BMI là " + bmi + ` với chiều cao là ${height}cm và cân nặng là ${weight}kg`  
+        }
+        console.log(BMI_calc(160, 50))
+
+        // random một số trong một khoảng
+        function getRandom(min, max){
+         let ran = Math.floor(Math.random() * (max - min) + min)
+         return `Ngẫu nhiên một số từ ${min} đến ${max}: ` + ran
+        }
+        console.log(getRandom(3, 15))
+
+    </script>
+</body>
+</html>
