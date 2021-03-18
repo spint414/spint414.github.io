@@ -32,7 +32,7 @@ checkDays(2, 1993)
 // Bài 2: Viết function sử dụng vòng lặp từ 1->100
 
 function numLoop() {
-    for (let i = 0; i <= 100; i++)
+    for (let i = 1; i <= 100; i++)
         if ((i % 3 == 0) && (i % 5 == 0)) {
             console.log("FizzBuzz")
         }
@@ -50,29 +50,41 @@ numLoop()
 
 function volumeSphere(radius) {
     let v = 4 / 3 * Math.PI * Math.pow(radius, 3)
-    console.log(v)
+    return v
 }
-volumeSphere(5)
+console.log(volumeSphere(5))
 
 // Bài 4: Viết function truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng. 
 
 function integerGapSum(a, b) {
+    if a < b {
     let n = (b - a - 1)
     let sum = n * (a + b) / 2
-    console.log(sum)
+        return sum
+    }
+    else if b < a{
+    let n = (a - b - 1)
+    let sum = n * (a + b) / 2
+        return sum
+    }
 }
 
-integerGapSum(4, 10)
+console.log(integerGapSum(4, 10))
 
 // Bài 5: Viết function truyền vào 1 số. Kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc false. 
 
 function isprime(a) {
-    for (let i = 2; i < a; i++) {
-        if (a % i === 0) {
-            return false
+    if a > 0 {
+        for (let i = 2; i < a; i++) {
+            if (a % i === 0) {
+                return false
+            }
         }
+        return true
     }
-    return true
+    else {
+        return console.log("đây không phải là số nguyên dương")
+    }
 }
 console.log(isprime(13)) 
 
