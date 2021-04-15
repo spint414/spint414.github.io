@@ -1,3 +1,4 @@
+// selector
 let list = document.getElementById('list')
 
 // 1
