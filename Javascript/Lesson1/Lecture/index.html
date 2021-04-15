@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello</p>
+
+    <script src="./main.js"></script>
+    <script> // nên để ở cuối body
+        // alert('Hello world')
+        console.log('Hello world')
+
+        // Khai baó biến sử dụng let
+        let name
+        name = 'Nguyễn Văn A'
+        console.log (name)
+
+        name = 'Nguyễn Văn B';
+        console.log (name)
+
+        name = 10
+        console.log (name)
+
+        // khai báo và gắn giá trị biến cùng một lúc
+        let email = 'abc@gmail.com';
+        console.log(email)
+
+        // Khai báo biến sử dụng const, không được gắn lại giá trị cho biến hằng số
+        // Thường sử dụng file riêng lưu hằng số
+        const number = 10;
+        console.log (number) 
+
+        // biến không có từ khóa (let) mặc định trở thành global function
+
+        function abc() {
+            // function scope (chỉ có tác dụng trong ngoặc)
+            age = 24 //VD không có từ khóa (let) -> tự động thành global function
+            console.log (age)
+        }
+        {
+            // block scope (chỉ có tác dụng trong ngoặc)
+            let num = 10;
+            console.log (num)
+        }
+
+        // để kiểm tra kiểu dữ liệu của một biến chúng ta sử dụng toán tử typeof
+        let number1 = 10
+        console.log(typeof number)
+
+        // biến không được gán giá trị cũng là một loại giá trị 'undefied'
+        let number2
+        console.log (typeof number)
+
+        //-----------------------------------
+
+        // kiểu dữ liệu string, được bao quanh bằng cặp dấu nháy đơn hoặc nháy kép, không có kí tự thì được coi là dữ liệu rỗng
+        let text1 = '"Hà nội" hôm nay trời đẹp quá' //muốn dùng nháy thì phải khác với nháy bao bọc dữ liệu
+        let text2 = '\'Hà nội\' hôm '  //khi muốn enter xuống dòng thì dùng '+'
+        + 'nay trời đẹp quá'
+        console.log (text1)
+
+        // nối chuỗi (hoặc biến) lại với nhau
+        let first_name = 'Nguyễn'
+        let last_name = 'Thu Hằng'
+        let full_name = first_name + ' ' + last_name
+        console.log(full_name)
+
+        // Dùng dấu gạch tích ` để hiện thị những nội dung hoặc có function phức tạp hơn
+        let text3 = `Hà nội hôm nay
+         trời đẹp quá` //viết chuỗi trong nhiều dòng
+        console.log(text3)
+
+        let text4 = `Xin chào , tên tôi là ${full_name}. Năm nay tôi ${2021-1990} tuổi` //tính toán sử dụng $
+        console.log(text4)
+
+        //-----------------------------------
+
+        // kiểu dữ liệu number
+        let num1 = 20
+        let num2 = 5
+
+        // các phép toán
+        console.log(num1 + num2) // cộng
+        console.log(num1 - num2) // trừ
+        console.log(num1 * num2) // nhân
+        console.log(num1 / num2) // chia
+        console.log(num1 % num2) // chia lấy dư
+
+        // đối tượng math
+        console.log(Math.PI) // số pi
+        console.log(Math.sqrt(num1)) // căn bậc hai
+        console.log(Math.pow(num1, num2)) // num1 mũ num2
+        console.log(num1 ** num2) //num1 mũ num2
+        console.log(Math.max(1,3,9,6)) // lấy số lớn nhất
+        console.log(Math.min(1,3,9,6)) // lấy số nhỏ nhất
+        console.log(Math.ceil(2.5)) //làm tròn lên
+        console.log(Math.floor(3.1)) //làm tròn xuống
+        console.log(Math.random() * 10) //ra số ngẫu nhiên (trong khoảng từ một đến 10)
+
+        //-----------------------------------
+
+        // Function
+        // Định nghĩa
+        function sayHello() {
+            console.log('Xin chào')
+        }
+
+        // Thực thi function
+        sayHello()
+
+        // function có tham số
+        function sayHello1(name, birth) {
+            console.log(`Xin chào ${name}, Năm nay ${2021 - birth} tuổi`)
+        }
+
+        sayHello1('Nguyễn Văn A', 1996)
+        sayHello1('Nguyễn Văn B', 2000)
+
+        // function trả về giá trị
+        // ví dụ tính tổng 2 số
+        function sum(a = 10, b =20) { //gía trị mặc định trong trường hợp thiếu giá trị {
+            let result = a + b
+            return result
+        }
+
+        //thực thi
+        let data = sum(3,4)
+        console.log(data)
+        console.log(sum(6,4))
+        console.log(sum(5))
+
+        // Excercise
+        function sayHelloevery1(target) {
+            console.log(`xin chào ${target}`)
+        } 
+        sayHelloevery1(`các bạn`)
+        sayHelloevery1(`abc`)
+        sayHelloevery1(`"abcd"`)
+
+        function total(a = 45, b =12) {
+            return a + b
+        }
+        let data1 = total(1,2)
+        console.log(data1)
+        
+        function power(a = 3, b = 2) {
+            return Math.pow(a,b)
+        }
+        let data2 = power(3,4)
+        console.log(data2)
+
+        function century(year) {
+            return Math.ceil(year/100);
+        }
+
+        let data3 = century(1884)
+        console.log(data3) 
+
+    </script>
+</body>
+</html>

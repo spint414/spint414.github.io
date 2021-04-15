@@ -1,3 +1,58 @@
+// String method
+let str = "Hello"
+
+// Các phương thức giống với Array
+// indexOf()
+console.log('=== indexOf ===')
+console.log(str.indexOf('lo'))
+console.log(str.indexOf('k'))
+
+// lastIndexOf()
+console.log('=== lastIndexOf ===')
+console.log(str.lastIndexOf('l'))
+console.log(str.lastIndexOf('k'))
+
+// includes
+console.log('=== includes ===')
+console.log(str.includes('l'))
+console.log(str.includes('k'))
+
+// concat()
+console.log('=== concat ===')
+console.log(str.concat('', 'world'))
+
+// slice()
+console.log('=== slice ===')
+console.log(str.slice(1, 4))
+console.log(str.slice(-4, -1))
+console.log(str.slice(1))
+console.log(str.slice(0))
+
+// Một số phương thức khác của string
+// toUpperCase(): In hoa
+console.log(str.toUpperCase())
+
+// toLowerCase(): In thường
+console.log(str.toLowerCase())
+
+// trim(): loại bỏ khoảng trắng ở đầu và cuối chuỗi
+console.log('   Hello world    '.trim)
+
+// split() convert từ chuỗi sang mảng
+console.log('hello world'.split())
+console.log('hello world hi nice'.split(' '))
+console.log('hello world hi nice'.split('o'))
+console.log('hello world hi nice'.split(''))
+
+// repeat
+console.log('hello'.repeat(10))
+
+// charAt
+console.log('hello'.charAt(0))
+console.log('hello'.charAt(4))
+console.log('hello'.charAt('hello'.length - 1))
+
+// Excersice
 // Bài 1
 function checkStringExist(str1, str2) {
     if (str1.includes(str2)) {
@@ -11,13 +66,7 @@ console.log(checkStringExist('i love you', 'love'))
 
 // Bài 2
 function shortenString(str) {
-    if (str.length > 8) {
-        return str.slice(0, 8) + '...'
-    }
-    else {
-        return str
-    }
-    
+    return str.slice(0, 8) + '...'
 }
 console.log(shortenString("Xin chao cac ban"))
 
@@ -56,28 +105,16 @@ function reverseString(str) {
 }
 console.log(reverseString("Hello World"))
 
-function reverseString_02(str) {
-    let arr = str.split('')
-    for (let i = 0; i < arr.length; i++) {
-        let temp = arr[i]
-        arr[i] = arr[arr.length - i - 1]
-        arr[arr.length - i - 1] = temp
-    }
-    console.log(arr)
-}
-console.log(reverseString_02("Hello World"))
-
-
 // Bài 6
 function checkSymmetricString(str) {
-    let strRmSpace = str.toLowerCase().split('').join('')
-    let newArr = strRmSpace.split("")
-    for (i = 0; i < Math.ceil(newArr.length / 2); i++) {
-        if (newArr[i] != newArr[newArr.length - i - 1]) {
-            return false;
-        }
+    let normal = str.toLowerCase().split('').join('')
+    let reverse = str.toLowerCase().split('').reverse().join('')
+    if (normal === reverse) {
+        return true
     }
-    return true;
+    else {
+        return false
+    }
 }
 console.log(checkSymmetricString('Race car'))
 console.log(checkSymmetricString('hello world'))
@@ -95,18 +132,6 @@ function checkVowel(str) {
 }
 console.log(checkVowel("hello hien"))
 
-function checkVowel_01(str) {
-    let vowels = 'aeiou'
-    let arr = str.split('')
-    let count = 0
-    for (let i = 0; i < arr.length; i++) {
-        if (vowels.indexOf(arr[i] != -1)) {
-            count += 1
-        }
-    }
-}
-console.log(checkVowel_01("hello hien"))
-
 // Bài 8
 function checkEnd(str, target){
     let str1 = str.split('').reverse()
@@ -119,11 +144,6 @@ function checkEnd(str, target){
     return true;
 }
 console.log(checkEnd("hello", "lo"))
-
-function checkEnd_01(str, target) {
-    return str.endWith(target)
-}
-console.log(checkEnd_01("hello", "lo"))
 
 // Bài 9
 function getFirstLetter(str) {
@@ -153,16 +173,3 @@ function getLetterNoRepeat(str) {
   return unique.split(" ").join("");
 }
 console.log(getLetterNoRepeat("abce abcdf"))
-
-function getLetterNoRepeat_01(str) {
-    let removeSpace = str.split(' ').join('')
-    let arr = removeSpace.split('')
-    let uniqueLetter = []
-    for (let i = 0; i < arr.length; i++) {
-        if (arr.indexOf(arr[i]) == arr.lastIndexOf(arr[i])) {
-            uniqueLetter.push(arr[i])
-        }
-    }
-    return uniqueLetter.join(',')
-}
-console.log(getLetterNoRepeat_01("abce abcdf"))

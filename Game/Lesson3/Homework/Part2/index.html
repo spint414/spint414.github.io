@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #74b9ff;
+      }
+      .container {
+        background-color: white;
+        height: 200px;
+        width: 30%;
+        margin: 300px auto;
+        padding: 0 30px 30px 30px;
+        text-transform: uppercase;
+        font-size: 10px;
+      }
+      .slogan {
+          padding: 5px 30px;
+          text-align: center;
+          background-color: #0984e3;
+      }
+      .content {
+        border-style: solid;
+        border-color: #0984e3;
+        margin: 30px auto;
+      }
+      .operator, .equal {
+            display: inline-block;
+            border-style: solid;
+            border-color: #0984e3;
+            width: 30px;
+            height: 80px;
+            text-align: center;
+            font-size: 50px;
+            padding: 5px;
+            margin: 0px 10px;
+      }
+      .box {
+        display: inline-block;
+            border-style: solid;
+            border-color: #0984e3;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            font-size: 50px;
+            padding: 5px;
+        }
+        .btn {
+            display: inline-block;
+            border-style: solid;
+            border-color: #0984e3;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            font-size: 50px;
+            padding: 5px;
+        }
+        #result {
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slogan">
+        <h2>Thử tài tính toán nào bạn ơi!</h2>
+      </div>
+      <div class="content">
+        <div class="box">1</div>
+        <div class="operator">+</div>
+        <div class="box">2</div>
+        <div class="equal">=</div>
+        <div class="box">
+          <input type="text" id="result" />
+        </div>
+        <div class="btn">
+          <button class="check">Kiểm tra</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const num1 = document.querySelector("body > div > div.content > div:nth-child(1)")
+        const num2 = document.querySelector("body > div > div.content > div:nth-child(3)")
+        const operator = document.querySelector("body > div > div.content > div.operator")
+        const input = document.querySelector("#result")
+        const check = document.querySelector("body > div > div.content > div.btn > button")
+
+        num1.innerText = Math.floor(Math.random() * 100);
+        num2.innerText = Math.floor(Math.random() * 100);
+        operator.innerText = operatorRandom()
+
+        function operatorRandom() {
+          let characters = ["+","-","*","/","%","^"]
+          let character = characters[Math.floor(Math.random() * characters.length)]
+          return character
+      }
+      
+      check.addEventListener('click', function () {
+        let arr = [num1.innerText, operator.innerText, num2.innerText]
+        let result = eval(arr.join(""))
+        if (result === input.value) {
+          alert("Đúng")
+        }
+        else {
+          alert("Sai")
+        }
+      })      
+    </script>
+  </body>
+</html>

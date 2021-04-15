@@ -1,0 +1,361 @@
+
+:root {
+    --section-padding: 50px 0;
+    --black: #1c1e21;
+    --white: #ffffff;
+    --grey: #f0f2f5;
+    --grey-fill: #1d2129;
+    --grey-text: #8a8d91;
+    --green: #42b72a;
+    --blue: #1877f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: var(--grey);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.34;
+    color: var(--black);
+}
+
+html, body{min-height:100%;}
+body{height:100vh;}
+
+
+body {
+    background: var(--grey);
+    color: var(--black);
+    direction: ltr;
+    line-height: 1.34;
+    margin: 0;
+    padding: 0;
+    unicode-bidi: embed;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+strong, b, th {
+    font-weight: 600;
+}
+
+.main {
+    padding-bottom: 112px;
+    padding-top: 72px;
+    min-width: 500px;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+    width: 980px;
+}
+
+.banner {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 0;
+    padding-right: 32px;
+    vertical-align: top;
+    width: 580px;
+}
+
+.logo {
+    padding: 112px 0 16px;
+}
+
+.facebook-logo {
+    height: 106px;
+    margin: -28px;
+}
+
+
+.slogan {
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+}
+
+.form {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.form-content {
+    height: 456px;
+    width: 396px;
+}
+
+.login-form {
+    margin: 0;
+    padding: 0;
+}
+
+.form-content-login {
+    font-family: inherit;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    margin: 40px 0 0;
+    padding: 20px 0 28px;
+    width: 396px;
+    padding-bottom: 24px;
+    padding-top: 10px;
+}
+
+.input-email, .input-password {
+    font-size: 17px;
+    width: 364px;
+    display: inline-block;
+    margin: auto;
+    padding: 6px 0;
+}
+
+input[type="email"], input[type="password"]  {
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 14px 16px;
+    width: 330px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    line-height: 16px;
+}
+
+.input-text:focus {
+    border: 1px var(--blue);
+}
+
+.login {
+    padding-top: 6px;
+    text-align: center;
+}
+
+.login-button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 332px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: content-box;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.login-button:hover {
+    background-color: #166fe5;
+}
+
+.forgot-password {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.forgot-password-link {
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+.line {
+    align-items: center;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    margin: 20px 16px;
+    text-align: center;
+}
+
+.new-account {
+    padding-top: 6px;
+    display: block;
+}
+
+.new-account-button {
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: var(--green);
+    color: var(--white);
+    box-sizing: content-box;
+    font-weight: bold;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+}
+
+.new-account-button:hover {
+    background-color: #36a420;
+}
+
+.business {
+    margin-top: 28px;
+    text-align: center;
+    border-top: none;
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 0;
+}
+
+.business-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    margin: 0 auto;
+    top: 25%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    background: var(--white);
+    width: 432px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+}
+
+.popup-tittle {
+    margin-top: 0;
+    padding-top: 10px;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    position: relative;
+    width: 432px;
+    text-align: left;
+}
+
+.popup-header {
+    color: #1c1e21;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.popup-slogan {
+    color: #606770;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.popup-form {
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #dadde1;
+    box-sizing: border-box;
+    padding: 16px;
+    position: relative;
+    width: 432px;
+}
+
+.signup {
+    text-align: left;
+}
+
+.full-name {
+    width: 399px;
+}
+
+.family {
+    float: left;
+    width: 194px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.name {
+    float: right;
+    width: 194px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+input[type="family-name"] {
+    width: 170px;
+}
+
+input[typ]
+
+input[type="family-name"], input[type="phone-number"], input[type="new-password"]
+{
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 11px;
+    color: #1c1e21;
+    background-color: #f5f6f7;
+}
+

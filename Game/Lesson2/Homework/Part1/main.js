@@ -1,23 +1,15 @@
-// Bài 1 + 4
-function changeWrd() {
+// Bài 1
+function highlight() {
     let txt = document.querySelector('p').innerText
-    txt = txt.replace(/!/g, "🤔")
-    txt = txt.replace(/\?/g, "😲")
     let arr = txt.split(' ')
-    let highlightwrd = ""
-    let result = ""
     for (i = 0; i < arr.length; i++) {
         if (arr[i].length >= 8) {
-            highlightwrd = "<span class='highlight'>" + arr[i] + "</span>"
+            arr[i] = `<span class='highlight'>${arr[i]}</span>`
         }
-        else {
-            highlightwrd = arr[i]
-        }
-        result = result + " " + highlightwrd + " "
     }
-    return result
+    return arr.join(" ")
 }
-document.querySelector('p').innerHTML = changeWrd()
+document.querySelector('p').innerHTML = highlight()
 
 // Bài 2
 let link = document.createElement('a')
@@ -35,3 +27,16 @@ function wordCount() {
 let wordCountDiv = document.createElement("div")
 wordCountDiv.innerText = "Tổng số lượng từ: " + wordCount()
 document.body.appendChild(wordCountDiv)
+
+// Bài 4
+document.querySelector('p').innerHTML = document.querySelector('p').innerHTML.replace(/!/g, "😲")
+document.querySelector('p').innerHTML = document.querySelector('p').innerHTML.replace(/\?/g, "🤔")
+
+// document.querySelector('p').innerHTML = document.querySelector('p').innerHTML.split("").map => {
+//     if (char == "?") {
+//         char = "😲"
+//     } else if (char == "!") {
+//         char = "🤔"
+//     }
+//     return char
+// }.join("")

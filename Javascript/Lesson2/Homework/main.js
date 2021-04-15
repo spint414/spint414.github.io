@@ -57,16 +57,14 @@ console.log(volumeSphere(5))
 // Bài 4: Viết function truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng. 
 
 function integerGapSum(a, b) {
-    if a < b {
-    let n = (b - a - 1)
-    let sum = n * (a + b) / 2
-        return sum
+    let max = Math.max(a, b)
+    let min = Math.min(a, b)
+
+    let sum = 0
+    for (let i = min + 1; i < max; i++) {
+        sum = sum +i
     }
-    else if b < a{
-    let n = (a - b - 1)
-    let sum = n * (a + b) / 2
-        return sum
-    }
+    return sum
 }
 
 console.log(integerGapSum(4, 10))
@@ -74,19 +72,17 @@ console.log(integerGapSum(4, 10))
 // Bài 5: Viết function truyền vào 1 số. Kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc false. 
 
 function isprime(a) {
-    if a > 0 {
-        for (let i = 2; i < a; i++) {
+    if (a < 2 || !Number.isInteger(a)) {
+        return false
+    }
+        for (let i = 2; i <= Math.sqrt(a); i++) {
             if (a % i === 0) {
                 return false
             }
         }
         return true
     }
-    else {
-        return console.log("đây không phải là số nguyên dương")
-    }
-}
-console.log(isprime(13)) 
+console.log(isprime(23)) 
 
 // Bài 6: Viết function truyền vào 1 số nguyên dương bất kỳ. Tính tổng tất cả các số nguyên tố mà nhỏ hơn hoặc bằng tham số truyền vào.
 

@@ -20,6 +20,16 @@ function similarity(arr1, arr2) {
 }
 console.log(similarity(([1, 3, 5, 10]), ([2, 3, 7, 29, 5])))
 
+function similarElement(arr1, arr2) {
+    let similar = []
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr2.includes(arr1[i])) {
+            similar.push(arr1[i])
+        }
+    }
+    return similar
+}
+
 // Bài 2
 function removeDuplicates(arr) {
     let result = []
@@ -29,8 +39,21 @@ function removeDuplicates(arr) {
         }
     }
     return result
-}
+}ss
 console.log(removeDuplicates([1, 5, 5, 28, 3, 4, 9, 28, 3]))
+
+function removeDuplicatesv2(arr) {
+    let unique = []
+    for (i = 0; i < arr.length; i++) {
+        if (unique.indexOf(arr[i]) == unique.lastIndexOf(arr[i]))
+            unique.push(arr[i]);
+    }
+    return unique
+}
+
+function removeDuplicatesv3(arr) {
+    return [...new Set(arr)]
+}
 
 // Bài 3
 function randomHexCode() {

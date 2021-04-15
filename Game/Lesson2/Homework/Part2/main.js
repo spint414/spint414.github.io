@@ -1,26 +1,28 @@
-let up = document.querySelector("body > div > div > button.btn.counterBtn.nextBtn")
-let down = document.querySelector("body > div > div > button.btn.counterBtn.prevBtn")
-let value = parseInt(document.getElementById("counter").innerText)
+let up = document.querySelector(".nextBtn")
+let down = document.querySelector(".prevBtn")
+let counter = document.getElementById("counter")
+
+let number = 0
 
 up.addEventListener('click', function () {
-    value++
-     if (value > 0){
-        document.getElementById("counter").style.color = "blue"
-    }
-     else if (value === 0) {
-        document.getElementById("counter").style.color = "#333333"
-    }
-    document.getElementById("counter").innerText = value
+    number++
+    update()
 })
 
 down.addEventListener('click', function () {
-    value--
-    if (value < 0) {
-        document.getElementById("counter").style.color = "red"
-    }
-    else if (value === 0) {
-        document.getElementById("counter").style.color = "#333333"
-    }
-    document.getElementById("counter").innerText = value
+    number--
+    update()
 })
 
+function update() {
+    counter.innerText = number
+    if (number > 0){
+    document.getElementById("counter").style.color = "blue"
+    }
+    else if (number == 0) {
+    document.getElementById("counter").style.color = "#333333"
+    }
+    else {
+    document.getElementById("counter").style.color = "red"
+    }
+}
